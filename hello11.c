@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int n,num,a,rem,rev=0;
+scanf("%d",&n);
+while(n>0)
+{
+scanf("%d",&num);
+a=num;
+if(num>=1000)
+{
+while(num>0)
+{
+rem=num%10;
+rev=rev*10+rem;
+num=num/10;
+}
+if(rev==a)
+{
+printf("pallindrome");
+}
+else
+{
+printf("not");
+}
+}
+else
+{
+printf("invalid");
+}
+n--;
+}getch();
+}
